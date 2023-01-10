@@ -7,6 +7,8 @@ import HotelList from './Components/HotelList';
 import EditHotel from './Components/editHotel';
 import AddMenu from './Components/addMenu';
 import MenuList from './Components/menuList';
+import FoodList from './Components/foodList';
+import GetFood from './Components/GetFood';
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +22,8 @@ function App() {
       <Route path="/HotelMenu" element={<AddMenu/>}></Route>
       <Route path="/MenuList" element={<MenuList/>}></Route>
       <Route path="/AddFood" element={<AddFood></AddFood>}></Route>
+      <Route path="/foodList" element={<FoodList/>}></Route>
+      <Route path ="/GetFood" element={<GetFood/>}></Route>
     </Routes>
     </BrowserRouter>
   );

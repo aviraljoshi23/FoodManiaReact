@@ -46,15 +46,13 @@ export default function AddFood() {
     formData.set("hotelId",hotelIdfield.current.value);
     formData.set("menuCategoryId",menuIdfield.current.value);
     formData.set("foodName",foodNameField.current.value);
-    formData.set("foodPrice",foodPriceField.current.value);
+    formData.set("foodPrice",foodPriceField.current.value*1);
     formData.set("foodDescription",foodDescription.current.value);
-    alert("Data Added");
     console.log(formData);
-
-    // let res =  await axios.post("http://localhost:3000/menu/save");
-    // if(res.data.status){
-    //   window.alert("Food Saved")
-    // }
+    let res =  await axios.post("http://localhost:3000/food/save",formData);
+    if(res.data.status){
+      window.alert("Food Saved")
+    }
   }
   const checkHotelMenu = ()=>{
     if(hotelIdfield.current.value==0){
@@ -66,7 +64,7 @@ export default function AddFood() {
     }
   }
   const onFileChange = (event)=>{
-    filename = event.target.files[0];
+    fileName = event.target.files[0];
   }
   return <>
     <div className="content">

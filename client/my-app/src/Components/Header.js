@@ -45,8 +45,8 @@ export default () => {
             <Link to="./HotelList">Hotel List</Link>
             <Link to="./HotelMenu">Add Hotel Menu</Link>
             <Link to="./MenuList">Menu List</Link>
-            <Link to="/food/foodItems">Food Details</Link>
-            <Link to="/food/foodList">Your Food Listing</Link>
+            <Link to="./FoodList">Food List</Link>
+            <Link to="./GetFood">Find Food</Link>
         </div>
 
     </>
