@@ -1,19 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-export default function HotelList() {
-  const [hotelList, sethotelList] = useState([])
+import MasterContext from "./MasterContext";
+export default function HotelList({sethotelList}) {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    loadData();
-  }, []);
-  const loadData = async () => {
-    const response = await axios.get("http://localhost:3000/hotel/hotel-list");
-    if (response.status) {
-      sethotelList(response.data.hotelList);
-    }
-  };
+  const {hotelList} = useContext(MasterContext);
+  // const [hotelList, sethotelList] = useState([])
+  // useEffect(() => {
+  //   loadData();
+  // }, []);
+  // const loadData = async () => {
+  //   const response = await axios.get("http://localhost:3000/hotel/hotel-list");
+  //   if (response.status) {
+  //     sethotelList(response.data.hotelList);
+  //   }
+  // };
   const deleteHotel = async (id, index) => {
     let confirm = window.confirm("Are you sure?");
     if (confirm) {
@@ -63,7 +64,6 @@ export default function HotelList() {
                   </tr>
                 )
               }
-
             </tbody>
           </table>
         </main>

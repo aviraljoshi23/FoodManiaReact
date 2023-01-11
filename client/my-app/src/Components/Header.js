@@ -47,6 +47,7 @@ export default () => {
             <Link to="./MenuList">Menu List</Link>
             <Link to="./FoodList">Food List</Link>
             <Link to="./GetFood">Find Food</Link>
+            <Link to="./AllFood">All Food</Link>
         </div>
 
     </>

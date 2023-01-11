@@ -16,7 +16,6 @@ export default function AddHotel() {
           sethotelList(response.data.hotelList);
         }
       };
-
     const save = async()=>{
         let hotelName =  hotelNameField.current.value;
         let hotelArea  = hotelAreaField.current.value

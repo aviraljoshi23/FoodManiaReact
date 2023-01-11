@@ -26,8 +26,12 @@ export const list =  async(req,res,next)=>{
 
 }
 
-export const remove =  async(req,res,next)=>{
+export const remove = async(req,res,next)=>{
     try{
-        
+        const data = await foodModal.deleteOne({_id:req.params.id});
+        res.json({status:true,mess:"Deleted Successfullyy"});
+    }
+    catch(err){
+        console.log(err);
     }
 }

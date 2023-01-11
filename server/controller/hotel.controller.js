@@ -19,7 +19,6 @@ export const save = async(req,res,next)=>{
     }
 }
 
-
 export const remove = async(req,res,next)=>{
     try{
         await Menu.deleteMany({categoryId:req.params.id})
